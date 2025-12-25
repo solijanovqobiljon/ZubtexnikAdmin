@@ -71,7 +71,7 @@ function AdminBody() {
 
             <div className='flex gap-[20px] flex-wrap mb-8'>
                 <div className='w-[230px] h-[110px] rounded-2xl bg-white shadow-sm p-5'>
-                    <p className='text-[#A3AED0] text-[15px]'>Jami Stomatologlar</p>
+                    <p className='text-[#A3AED0] text-[15px]'>Jami Zubtexniklar</p>
                     <p className='text-[#2B3674] text-[24px] font-bold'>87</p>
                     <p className='text-[#A3AED0] text-[12px]'><span className='text-[#05CD99]'>+23%</span> O'tgan oyga nisbatan</p>
                 </div>

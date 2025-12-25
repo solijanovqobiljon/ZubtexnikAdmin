@@ -38,27 +38,31 @@ const Login = () => {
 
     return (
         <>
-            <div className="flex min-h-screen w-full bg-white dark:bg-gray-900 overflow-hidden font-sans">
-                {/* Chap tomondagi rasm */}
-                <div className="hidden lg:block lg:w-3/5 relative">
+            <div className="flex min-h-screen w-full bg-white dark:bg-gray-900 overflow-hidden font-sans flex-col lg:flex-row">
+                
+                {/* Rasm qismi - Mobil uchun moslashtirildi */}
+                <div className="w-full lg:w-3/5 h-48 sm:h-64 lg:h-auto relative">
                     <img
                         src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop"
                         alt="Dental Office"
                         className="absolute inset-0 w-full h-full object-cover"
                     />
+                    {/* Rasm ustidagi ko'k rangli qatlam */}
                     <div className="absolute inset-0 bg-blue-900/30 mix-blend-multiply"></div>
                 </div>
 
-                {/* Login form */}
-                <div className="w-full lg:w-2/5 flex flex-col justify-between p-8 md:p-12 lg:p-16 bg-white dark:bg-gray-900 border-l dark:border-gray-800">
-                    <div className="w-full max-w-sm mx-auto my-auto">
-                        <div className="flex gap-4 flex-wrap items-center justify-center mb-10">
-                            <img src={Dentalist} alt="Dentalist" className="w-auto h-12" />
-                            <img src={DentaGo} alt="DentaGo" className="w-auto h-16" />
-                            <img src={Dentacrm} alt="Dentacrm" className="w-auto h-16" />
+                {/* Login form qismi */}
+                <div className="w-full lg:w-2/5 flex flex-col justify-between p-6 md:p-12 lg:p-16 bg-white dark:bg-gray-900 border-t lg:border-t-0 lg:border-l dark:border-gray-800">
+                    <div className="w-full max-w-sm mx-auto my-auto py-4 lg:py-0">
+                        
+                        {/* Logotiplar */}
+                        <div className="flex gap-4 flex-wrap items-center justify-center mb-8">
+                            <img src={Dentalist} alt="Dentalist" className="w-auto h-8 md:h-12" />
+                            <img src={DentaGo} alt="DentaGo" className="w-auto h-12 md:h-16" />
+                            <img src={Dentacrm} alt="Dentacrm" className="w-auto h-12 md:h-16" />
                         </div>
 
-                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                                     Login <span className="text-red-500">*</span>
@@ -112,7 +116,7 @@ const Login = () => {
                 </div>
             </div>
 
-            {/* Oferta Modal */}
+            {/* Oferta Modal - bir xil qoladi */}
             {showOfferModal && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-md p-4 animate-in fade-in duration-300">
                     <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col border dark:border-gray-800 overflow-hidden">
@@ -136,8 +140,7 @@ const Login = () => {
                         </div>
 
                         {/* Modal Scrollable Content */}
-                        <div className="p-8 overflow-y-auto text-gray-700 dark:text-gray-300 text-[14px] leading-relaxed space-y-6 scrollbar-thin scrollbar-thumb-gray-300">
-                            
+                        <div className="p-8 overflow-y-auto text-gray-700 dark:text-gray-300 text-[14px] leading-relaxed space-y-6">
                             <section>
                                 <p className="mb-4 italic text-gray-600 dark:text-gray-400">
                                     Ushbu ommaviy oferta Dentago platformasi va unda ro‘yxatdan o‘tgan zubtexnik o‘rtasida tuziladi. 
@@ -195,9 +198,8 @@ const Login = () => {
                                 </div>
                             </section>
 
-                            {/* Sticky Warning */}
                             <div className="p-4 bg-yellow-50 dark:bg-yellow-900/30 rounded-xl border border-yellow-200 dark:border-yellow-700/50">
-                                <p className="text-center font-bold text-yellow-800 dark:text-yellow-200">
+                                <p className="text-center font-bold text-yellow-800 dark:text-yellow-200 text-sm">
                                     Diqqat: "Roziman" tugmasini bosish orqali siz ushbu ofertani rasman imzolagan hisoblanasiz.
                                 </p>
                             </div>
@@ -216,7 +218,7 @@ const Login = () => {
                                 className="flex-1 py-3 px-6 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 shadow-lg shadow-blue-500/30 transition-all active:scale-95 flex items-center justify-center gap-2"
                             >
                                 <CheckCircle2 size={20} />
-                                Roziman va tizimga kirish
+                                Roziman
                             </button>
                         </div>
                     </div>
